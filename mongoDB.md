@@ -1,16 +1,17 @@
 # MongoDB Exercise
 
 ### Step 1: Create the Database
-```javascript
+```sh
 use movies
+```
 
-###Step 2: Create a Collection
-
-
+### Step 2: Create a Collection
+```sh
 db.createCollection("moviedetails")
+```
 
-###Step 3: Insert the Movie Documents
-
+### Step 3: Insert the Movie Documents
+```sh
 db.moviedetails.insertMany([
   { title: "Vikram", genre: "Drama", director: "Lokesh Kanakaraj", release_year: 2022 },
   { title: "Vettaiyan", genre: "Action", director: "Ganavel", release_year: 2024 },
@@ -18,42 +19,50 @@ db.moviedetails.insertMany([
   { title: "Leo", genre: "Action", director: "Lokesh Kanakaraj", release_year: 2023 },
   { title: "Vidamuyatchi", genre: "Thriller", director: "Magizh Thirumeni", release_year: 2025 }
 ])
+```
 
-###Step 4: List All Documents
-
+### Step 4: List All Documents
+```sh
 db.moviedetails.find()
+```
 
-###Step 5: List Lokesh Kanakaraj’s Movies
-
+### Step 5: List Lokesh Kanakaraj’s Movies
+```sh
 db.moviedetails.find({ director: "Lokesh Kanakaraj" })
+```
 
-###Step 6: List Lokesh Kanakaraj’s Movies Released in 2023
-
+### Step 6: List Lokesh Kanakaraj’s Movies Released in 2023
+```sh
 db.moviedetails.find({ director: "Lokesh Kanakaraj", release_year: 2023 })
+```
 
-###Step 7: Delete the Movie You Don’t Like
+### Step 7: Delete the Movie You Don’t Like
 Replace "Movie_Title" with the title of the movie you want to delete:
 
-
+```sh
 db.moviedetails.deleteOne({ title: "Movie_Title" })
+```
 
-###Step 8: Add Your Favorite Movie
+### Step 8: Add Your Favorite Movie
 Replace "Your_Movie_Title", "Your_Genre", "Your_Director", and Your_Year with your favorite movie details:
 
-
+```sh
 db.moviedetails.insertOne({
   title: "Your_Movie_Title",
   genre: "Your_Genre",
   director: "Your_Director",
   release_year: Your_Year
 })
-###Step 9: List the Movie Directed by Magizh Thirumeni in 2025
-
+```
+### Step 9: List the Movie Directed by Magizh Thirumeni in 2025
+```sh
 db.moviedetails.find({ director: "Magizh Thirumeni", release_year: 2025 })
+```
 
-###Step 10: List Out All Director’s Names
-
+### Step 10: List Out All Director’s Names
+```sh
 db.moviedetails.distinct("director")
+```
 
 
 
