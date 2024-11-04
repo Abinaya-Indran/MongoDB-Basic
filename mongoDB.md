@@ -1,8 +1,11 @@
-Step 1: Create the Database
+# MongoDB Exercise
 
+### Step 1: Create the Database
+```javascript
 use movies
 
 Step 2: Create a Collection
+
 
 db.createCollection("moviedetails")
 
@@ -29,8 +32,8 @@ Step 6: List Lokesh Kanakaraj’s Movies Released in 2023
 db.moviedetails.find({ director: "Lokesh Kanakaraj", release_year: 2023 })
 
 Step 7: Delete the Movie You Don’t Like
-
 Replace "Movie_Title" with the title of the movie you want to delete:
+
 
 db.moviedetails.deleteOne({ title: "Movie_Title" })
 
@@ -44,20 +47,13 @@ db.moviedetails.insertOne({
   director: "Your_Director",
   release_year: Your_Year
 })
-
 Step 9: List the Movie Directed by Magizh Thirumeni in 2025
 
 db.moviedetails.find({ director: "Magizh Thirumeni", release_year: 2025 })
 
-
 Step 10: List Out All Director’s Names
 
 db.moviedetails.distinct("director")
-
-
-
-
-
 
 
 
